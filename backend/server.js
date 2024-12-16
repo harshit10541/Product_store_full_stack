@@ -16,17 +16,9 @@ app.get("/", (req, res) => {
 
 app.use("/api/products", productRoutes)
 
-
-
-
-
-
-
 console.log(process.env.MONGO_URI);
 
 app.listen(5000, () => {
     connectDB();
   console.log(`Servser started at 5000`);
 });
-
-//MONGO_URI='mongodb+srv://harshit10541:xom11TVDQ2twhxpZ@cluster0.g8u8j.mongodb.net/travel_agency?retryWrites=true&w=majority&appName=Cluster0'
