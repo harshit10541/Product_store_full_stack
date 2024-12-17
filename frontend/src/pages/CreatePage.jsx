@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useProductStore } from "../store/product";
+import { Link } from "react-router-dom";
 
 const CreatePage = () => {
   const [newProduct, setNewProduct] = useState({
@@ -8,12 +9,12 @@ const CreatePage = () => {
     image: "",
   });
 
-  const {createProduct} = useProductStore();
+  const { createProduct } = useProductStore();
   const handleAddProduct = async () => {
-    const {success, message} = await createProduct(newProduct);
+    const { success, message } = await createProduct(newProduct);
     console.log("Success:", success);
     console.log("Message:", message);
-    setNewProduct({name: "", price:"", image:""});
+    setNewProduct({ name: "", price: "", image: "" });
   };
   return (
     <div>
@@ -28,15 +29,21 @@ const CreatePage = () => {
         placeholder="product price"
         name="price"
         value={newProduct.price}
-        onChange={(e) => setNewProduct({ ...newProduct, price: e.target.value })}
+        onChange={(e) =>
+          setNewProduct({ ...newProduct, price: e.target.value })
+        }
       />
       <input
         placeholder="product image"
         name="image"
         value={newProduct.image}
-        onChange={(e) => setNewProduct({ ...newProduct, image: e.target.value })}
+        onChange={(e) =>
+          setNewProduct({ ...newProduct, image: e.target.value })
+        }
       />
-      <button onClick={handleAddProduct}>Click ME!!</button>
+      <Link to={"/"}>
+        <button onClick={handleAddProduct}>Click ME!!</button>
+      </Link>
     </div>
   );
 };

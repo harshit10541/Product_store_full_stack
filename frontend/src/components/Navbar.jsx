@@ -10,7 +10,7 @@ const Navbar = () => {
                 Create
             </button>
         </Link>
-        <button>toggleColor</button>
+        {/* <button>toggleColor</button> */}
     </div>
   )
 }
