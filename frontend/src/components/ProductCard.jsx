@@ -77,6 +77,9 @@ const ProductCard = ({ product }) => {
           >
             Submit
           </button>
+          <button onClick = {() => {
+            setIsOpen(false);
+          }} >Close</button>
         </div>
       )}
     </>
