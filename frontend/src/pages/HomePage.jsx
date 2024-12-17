@@ -14,7 +14,7 @@ const HomePage = () => {
   return (
     <div>
       <h1> Current Products </h1>
-      <div>
+      <div >
         {products.map((product) => (
           <ProductCard key={product._id} product={product} />
         ))}

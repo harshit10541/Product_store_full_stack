@@ -20,10 +20,10 @@ const ProductCard = ({ product }) => {
   return (
     <>
       <div>
-        <div style={{ display: "flex", flexDirection: "row" }}>
+        <div style={{gap:"30px", display: "flex", flexDirection: "row" }}>
           <p>name: {product.name} </p>
-          <p>__Price: {product.price}</p>
-          <p>__image: {product.image}</p>
+          <p>Price: {product.price}</p>
+          <p>image: {product.image}</p>
           <button
             onClick={() => {
               handleDeleteProduct(product._id);
